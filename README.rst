@@ -5,10 +5,10 @@
    :target: https://discord.gg/ZASMEtS4kg
    :alt: Discord server invite
 .. image:: https://img.shields.io/pypi/v/nextcord.svg
-   :target: https://pypi.python.org/pypi/glowcord
+   :target: https://pypi.org/project/glowcord/
    :alt: PyPI version info
 .. image:: 	https://img.shields.io/pypi/dm/glowcord?color=informational&label=Pypi%20downloads
-   :target: https://pypi.python.org/pypi/glowcord
+   :target: https://pypi.org/project/glowcord/
    :alt: PyPI version info
 .. image:: https://img.shields.io/pypi/pyversions/nextcord.svg
    :target: https://pypi.python.org/pypi/glowcord
