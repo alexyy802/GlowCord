@@ -75,7 +75,7 @@ To install the development version, do the following:
 
 .. code:: sh
 
-    $ git clone https://github.com/nextcord/nextcord/
+    $ git clone https://github.com/cordcord/glowcord/
     $ cd nextcord
     $ python3 -m pip install -U .[voice]
 
