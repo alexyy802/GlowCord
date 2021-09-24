@@ -1,5 +1,5 @@
 """
-nextcord.types
+glowcord.types
 ~~~~~~~~~~~~~~
 
 Typings for the Discord API
