@@ -45,30 +45,30 @@ To install the library without full voice support, you can just run the followin
 .. code:: sh
 
     # Linux/macOS
-    python3 -m pip install -U nextcord
+    python3 -m pip install -U glowcord
 
     # Windows
-    py -3 -m pip install -U nextcord
+    py -3 -m pip install -U glowcord
 
 Otherwise to get voice support you should run the following command:
 
 .. code:: sh
 
     # Linux/macOS
-    python3 -m pip install -U "nextcord[voice]"
+    python3 -m pip install -U "glowcord[voice]"
 
     # Windows
-    py -3 -m pip install -U nextcord[voice]
+    py -3 -m pip install -U glowcord[voice]
 
 To install additional packages for speedup, run the following command:
 
 .. code:: sh
 
     # Linux/macOS
-    python3 -m pip install -U "nextcord[speed]"
+    python3 -m pip install -U "glowcord[speed]"
 
     # Windows
-    py -3 -m pip install -U nextcord[speed]
+    py -3 -m pip install -U glowcord[speed]
 
 
 To install the development version, do the following:
