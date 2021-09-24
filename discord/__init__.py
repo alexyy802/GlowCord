@@ -20,7 +20,7 @@ DEALINGS IN THE SOFTWARE.
 Module to allow for backwards compatibility for existing code and extensions
 """
 
-from nextcord import *
+from glowcord import *
 
 __title__ = 'discord'
 __author__ = 'tag-epic & Rapptz'
