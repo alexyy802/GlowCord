@@ -14,8 +14,8 @@
    :target: https://pypi.python.org/pypi/nextcord
    :alt: PyPI supported Python versions
 .. image:: https://img.shields.io/readthedocs/nextcord
-   :target: https://nextcord.readthedocs.io/en/latest
-   :alt: Nextcord documentation
+   :target: https://glowcord.readthedocs.io/en/latest/
+   :alt: Glowcord documentation
    
 GlowCord
 --------
