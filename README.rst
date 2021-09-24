@@ -1,8 +1,8 @@
 .. image:: assets/nextcord-banner.svg
    :alt: Nextcord
 
-.. image:: https://discord.com/api/guilds/881118111967883295/embed.png
-   :target: https://discord.gg/ZebatWssCB
+.. image:: https://discord.com/api/guilds/794739329956053063/embed.png
+   :target: https://discord.gg/ZASMEtS4kg
    :alt: Discord server invite
 .. image:: https://img.shields.io/pypi/v/nextcord.svg
    :target: https://pypi.python.org/pypi/nextcord
