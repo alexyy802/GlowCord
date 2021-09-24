@@ -1,6 +1,6 @@
 :orphan:
 
-.. currentmodule:: nextcord
+.. currentmodule:: glowcord
 
 .. _migrating-to-async:
 
@@ -175,9 +175,9 @@ After:
 
 .. code-block:: python3
 
-    server.region == nextcord.ServerRegion.us_west
-    member.status = nextcord.Status.online
-    channel.type == nextcord.ChannelType.text
+    server.region == glowcord.ServerRegion.us_west
+    member.status = glowcord.Status.online
+    channel.type == glowcord.ChannelType.text
 
 The main reason for this change was to reduce the use of finicky strings in the API as this
 could give users a false sense of power. More information can be found on the :ref:`discord-api-enums` page.
@@ -270,7 +270,7 @@ in the function signature.
 Running the Client
 --------------------
 
-In earlier versions of nextcord, ``client.run()`` was a blocking call to the main thread
+In earlier versions of glowcord, ``client.run()`` was a blocking call to the main thread
 that called it. In v0.10.0 it is still a blocking call but it handles the event loop for you.
 However, in order to do that you must pass in your credentials to :meth:`Client.run`.
 
@@ -300,10 +300,10 @@ event loop then doing so is quite straightforward:
 
 .. code-block:: python3
 
-    import nextcord
+    import glowcord
     import asyncio
 
-    client = nextcord.Client()
+    client = glowcord.Client()
 
     @asyncio.coroutine
     def main_task():

@@ -2,7 +2,7 @@
 
 .. _quickstart:
 
-.. currentmodule:: nextcord
+.. currentmodule:: glowcord
 
 Quickstart
 ============
@@ -19,9 +19,9 @@ It looks something like this:
 
 .. code-block:: python3
 
-    import nextcord
+    import glowcord
 
-    client = nextcord.Client()
+    client = glowcord.Client()
 
     @client.event
     async def on_ready():
@@ -37,7 +37,7 @@ It looks something like this:
 
     client.run('your token here')
 
-Let's name this file ``example_bot.py``. Make sure not to name it ``nextcord`` as that'll conflict
+Let's name this file ``example_bot.py``. Make sure not to name it ``glowcord`` as that'll conflict
 with the library.
 
 A lot is going on here, so let's walk you through it step by step.

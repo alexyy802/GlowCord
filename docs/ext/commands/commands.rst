@@ -1,4 +1,4 @@
-.. currentmodule:: nextcord
+.. currentmodule:: glowcord
 
 .. _ext_commands_commands:
 
@@ -33,7 +33,7 @@ as seen in the example above. The second is using the :func:`~ext.commands.comma
 
 Essentially, these two are equivalent: ::
 
-    from nextcord.ext import commands
+    from glowcord.ext import commands
 
     bot = commands.Bot(command_prefix='$')
 
@@ -365,7 +365,7 @@ For example, to receive a :class:`Member` you can just pass it as a converter:
 .. code-block:: python3
 
     @bot.command()
-    async def joined(ctx, *, member: nextcord.Member):
+    async def joined(ctx, *, member: glowcord.Member):
         await ctx.send(f'{member} joined on {member.joined_at}')
 
 When this command is executed, it attempts to convert the string given into a :class:`Member` and then passes it as a
@@ -476,13 +476,13 @@ a singular type. For example, given the following:
     import typing
 
     @bot.command()
-    async def union(ctx, what: typing.Union[nextcord.TextChannel, nextcord.Member]):
+    async def union(ctx, what: typing.Union[glowcord.TextChannel, glowcord.Member]):
         await ctx.send(what)
 
 
-The ``what`` parameter would either take a :class:`nextcord.TextChannel` converter or a :class:`nextcord.Member` converter.
+The ``what`` parameter would either take a :class:`glowcord.TextChannel` converter or a :class:`glowcord.Member` converter.
 The way this works is through a left-to-right order. It first attempts to convert the input to a
-:class:`nextcord.TextChannel`, and if it fails it tries to convert it to a :class:`nextcord.Member`. If all converters fail,
+:class:`glowcord.TextChannel`, and if it fails it tries to convert it to a :class:`glowcord.Member`. If all converters fail,
 then a special error is raised, :exc:`~ext.commands.BadUnionArgument`.
 
 Note that any valid converter discussed above can be passed in to the argument list of a :data:`typing.Union`.
@@ -547,7 +547,7 @@ Consider the following example:
 .. code-block:: python3
 
     @bot.command()
-    async def slap(ctx, members: commands.Greedy[nextcord.Member], *, reason='no reason'):
+    async def slap(ctx, members: commands.Greedy[glowcord.Member], *, reason='no reason'):
         slapped = ", ".join(x.name for x in members)
         await ctx.send(f'{slapped} just got slapped for {reason}')
 
@@ -570,7 +570,7 @@ When mixed with the :data:`typing.Optional` converter you can provide simple and
     import typing
 
     @bot.command()
-    async def ban(ctx, members: commands.Greedy[nextcord.Member],
+    async def ban(ctx, members: commands.Greedy[glowcord.Member],
                        delete_days: typing.Optional[int] = 0, *,
                        reason: str):
         """Mass bans members with an optional delete_days parameter"""
@@ -591,7 +591,7 @@ This command can be invoked any of the following ways:
     The usage of :class:`~ext.commands.Greedy` and :data:`typing.Optional` are powerful and useful, however as a
     price, they open you up to some parsing ambiguities that might surprise some people.
 
-    For example, a signature expecting a :data:`typing.Optional` of a :class:`nextcord.Member` followed by a
+    For example, a signature expecting a :data:`typing.Optional` of a :class:`glowcord.Member` followed by a
     :class:`int` could catch a member named after a number due to the different ways a
     :class:`~ext.commands.MemberConverter` decides to fetch members. You should take care to not introduce
     unintended parsing ambiguities in your code. One technique would be to clamp down the expected syntaxes
@@ -614,11 +614,11 @@ For example, the following code:
 
 .. code-block:: python3
 
-    from nextcord.ext import commands
-    import nextcord
+    from glowcord.ext import commands
+    import glowcord
 
     class BanFlags(commands.FlagConverter):
-        member: nextcord.Member
+        member: glowcord.Member
         reason: str
         days: int = 1
 
@@ -649,7 +649,7 @@ or the default value then the :func:`~ext.commands.flag` function can come in ha
     from typing import List
 
     class BanFlags(commands.FlagConverter):
-        members: List[nextcord.Member] = commands.flag(name='member', default=lambda ctx: [])
+        members: List[glowcord.Member] = commands.flag(name='member', default=lambda ctx: [])
 
 This tells the parser that the ``members`` attribute is mapped to a flag named ``member`` and that
 the default value is an empty list. For greater customisability, the default can either be a value or a callable
@@ -693,12 +693,12 @@ For example, augmenting the example above:
 
 .. code-block:: python3
 
-    from nextcord.ext import commands
+    from glowcord.ext import commands
     from typing import List
-    import nextcord
+    import glowcord
 
     class BanFlags(commands.FlagConverter):
-        members: List[nextcord.Member] = commands.flag(name='member')
+        members: List[glowcord.Member] = commands.flag(name='member')
         reason: str
         days: int = 1
 
@@ -723,12 +723,12 @@ allows for "greedy-like" semantics using a variadic tuple:
 
 .. code-block:: python3
 
-    from nextcord.ext import commands
+    from glowcord.ext import commands
     from typing import Tuple
-    import nextcord
+    import glowcord
 
     class BanFlags(commands.FlagConverter):
-        members: Tuple[nextcord.Member, ...]
+        members: Tuple[glowcord.Member, ...]
         reason: str
         days: int = 1
 
@@ -776,7 +776,7 @@ handlers that allow us to do just that. First we decorate an error handler funct
 .. code-block:: python3
 
     @bot.command()
-    async def info(ctx, *, member: nextcord.Member):
+    async def info(ctx, *, member: glowcord.Member):
         """Tells you some info about the member."""
         msg = f'{member} joined on {member.joined_at} and has {len(member.roles)} roles.'
         await ctx.send(msg)

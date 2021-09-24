@@ -1,19 +1,19 @@
 :orphan:
 
-.. currentmodule:: nextcord
+.. currentmodule:: glowcord
 
 .. _intro:
 
 Introduction
 ==============
 
-This is the documentation for nextcord, a library for Python to aid
+This is the documentation for glowcord, a library for Python to aid
 in creating applications that utilise the Discord API.
 
 Prerequisites
 ---------------
 
-nextcord works with Python 3.8 or higher. Support for earlier versions of Python
+glowcord works with Python 3.8 or higher. Support for earlier versions of Python
 is not provided. Python 2.7 or lower is not supported. Python 3.7 or lower is not supported.
 
 
@@ -24,16 +24,16 @@ Installing
 
 You can get the library directly from PyPI: ::
 
-    python3 -m pip install -U nextcord
+    python3 -m pip install -U glowcord
 
 If you are using Windows, then the following should be used instead: ::
 
-    py -3 -m pip install -U nextcord
+    py -3 -m pip install -U glowcord
 
 
-To get voice support, you should use ``nextcord[voice]`` instead of ``nextcord``, e.g. ::
+To get voice support, you should use ``glowcord[voice]`` instead of ``glowcord``, e.g. ::
 
-    python3 -m pip install -U nextcord[voice]
+    python3 -m pip install -U glowcord[voice]
 
 On Linux environments, installing voice requires getting the following dependencies:
 
@@ -84,14 +84,14 @@ However, for the quick and dirty:
 
     .. code-block:: shell
 
-        $ pip install -U nextcord
+        $ pip install -U glowcord
 
 Congratulations. You now have a virtual environment all set up.
 
 Basic Concepts
 ---------------
 
-nextcord revolves around the concept of :ref:`events <discord-api-events>`.
+glowcord revolves around the concept of :ref:`events <discord-api-events>`.
 An event is something you listen to and then respond to. For example, when a message
 happens, you will receive an event about it that you can respond to.
 
@@ -99,7 +99,7 @@ A quick example to showcase how events work:
 
 .. code-block:: python3
 
-    from nextcord.ext import commands
+    from glowcord.ext import commands
 
     # the prefix is not used in this example
     bot = commands.Bot(command_prefix='$')

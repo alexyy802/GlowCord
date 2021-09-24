@@ -1,12 +1,12 @@
 :orphan:
 
-.. currentmodule:: nextcord
+.. currentmodule:: glowcord
 .. _faq:
 
 Frequently Asked Questions
 ===========================
 
-This is a list of Frequently Asked Questions regarding using ``nextcord`` and its extension modules. Feel free to suggest a
+This is a list of Frequently Asked Questions regarding using ``glowcord`` and its extension modules. Feel free to suggest a
 new question or submit one via pull requests.
 
 .. contents:: Questions
@@ -81,7 +81,7 @@ General questions regarding library usage belong here.
 Where can I find usage examples?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Example code can be found in the `examples folder <https://github.com/nextcord/nextcord/tree/master/examples>`_
+Example code can be found in the `examples folder <https://github.com/glowcord/glowcord/tree/master/examples>`_
 in the repository.
 
 How do I set the "Playing" status?
@@ -105,11 +105,11 @@ For memory optimisation purposes, some activities are offered in slimmed-down ve
 
 Putting both of these pieces of info together, you get the following: ::
 
-    client = nextcord.Client(activity=nextcord.Game(name='my game'))
+    client = glowcord.Client(activity=glowcord.Game(name='my game'))
 
     # or, for watching:
-    activity = nextcord.Activity(name='my activity', type=nextcord.ActivityType.watching)
-    client = nextcord.Client(activity=activity)
+    activity = glowcord.Activity(name='my activity', type=glowcord.ActivityType.watching)
+    client = glowcord.Client(activity=activity)
 
 How do I send a message to a specific channel?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -150,18 +150,18 @@ to pass to Discord when uploading.
 
 If you want to upload an image it's as simple as: ::
 
-    await channel.send(file=nextcord.File('my_file.png'))
+    await channel.send(file=glowcord.File('my_file.png'))
 
 If you have a file-like object you can do as follows: ::
 
     with open('my_file.png', 'rb') as fp:
-        await channel.send(file=nextcord.File(fp, 'new_filename.png'))
+        await channel.send(file=glowcord.File(fp, 'new_filename.png'))
 
 To upload multiple files, you can use the ``files`` keyword argument instead of ``file``\: ::
 
     my_files = [
-        nextcord.File('result.zip'),
-        nextcord.File('teaser_graph.png'),
+        glowcord.File('result.zip'),
+        glowcord.File('teaser_graph.png'),
     ]
     await channel.send(files=my_files)
 
@@ -178,7 +178,7 @@ and then pass an :class:`io.BytesIO` instance to :class:`File` like so:
             if resp.status != 200:
                 return await channel.send('Could not download file...')
             data = io.BytesIO(await resp.read())
-            await channel.send(file=nextcord.File(data, 'cool_image.png'))
+            await channel.send(file=glowcord.File(data, 'cool_image.png'))
 
 
 How can I add a reaction to a message?
@@ -216,7 +216,7 @@ Quick example: ::
     await message.add_reaction(emoji)
 
     # no ID, do a lookup
-    emoji = nextcord.utils.get(guild.emojis, name='LUL')
+    emoji = glowcord.utils.get(guild.emojis, name='LUL')
     if emoji:
         await message.add_reaction(emoji)
 
@@ -248,12 +248,12 @@ this together we can do the following: ::
             # an error happened sending the message
             pass
 
-    voice.play(nextcord.FFmpegPCMAudio(url), after=my_after)
+    voice.play(glowcord.FFmpegPCMAudio(url), after=my_after)
 
 How do I run something in the background?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Check the background_task.py example. <https://github.com/nextcord/nextcord/blob/master/examples/background_task.py>`_
+`Check the background_task.py example. <https://github.com/glowcord/glowcord/blob/master/examples/background_task.py>`_
 
 How do I get a specific model?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -286,12 +286,12 @@ specific models.
 Quick example: ::
 
     # find a guild by name
-    guild = nextcord.utils.get(client.guilds, name='My Server')
+    guild = glowcord.utils.get(client.guilds, name='My Server')
 
     # make sure to check if it's found
     if guild is not None:
         # find a channel by name
-        channel = nextcord.utils.get(guild.text_channels, name='cool-channel')
+        channel = glowcord.utils.get(guild.text_channels, name='cool-channel')
 
 How do I make a web request?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -321,8 +321,8 @@ where ``image.png`` is the filename of the image you will send.
 
 Quick example: ::
 
-    file = nextcord.File("path/to/my/image.png", filename="image.png")
-    embed = nextcord.Embed()
+    file = glowcord.File("path/to/my/image.png", filename="image.png")
+    embed = glowcord.Embed()
     embed.set_image(url="attachment://image.png")
     await channel.send(file=file, embed=embed)
 
@@ -339,7 +339,7 @@ This is currently a Discord limitation.
 Commands Extension
 -------------------
 
-Questions regarding ``nextcord.ext.commands`` belong here.
+Questions regarding ``glowcord.ext.commands`` belong here.
 
 Why does ``on_message`` make my commands stop working?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

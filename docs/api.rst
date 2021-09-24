@@ -1,9 +1,9 @@
-.. currentmodule:: nextcord
+.. currentmodule:: glowcord
 
 API Reference
 ===============
 
-The following section outlines the API of nextcord.
+The following section outlines the API of glowcord.
 
 .. note::
 
@@ -11,7 +11,7 @@ The following section outlines the API of nextcord.
     in an output-independent way.  If the logging module is not configured,
     these logs will not be output anywhere.  See :ref:`logging_setup` for
     more information on how to set up and use the logging module with
-    nextcord.
+    glowcord.
 
 Version Related Info
 ---------------------
@@ -162,9 +162,9 @@ PCMVolumeTransformer
 Opus Library
 ~~~~~~~~~~~~~
 
-.. autofunction:: nextcord.opus.load_opus
+.. autofunction:: glowcord.opus.load_opus
 
-.. autofunction:: nextcord.opus.is_loaded
+.. autofunction:: glowcord.opus.is_loaded
 
 .. _discord-api-events:
 
@@ -177,9 +177,9 @@ There are two ways to register an event, the first way is through the use of
 :meth:`Client.event`. The second way is through subclassing :class:`Client` and
 overriding the specific events. For example: ::
 
-    import nextcord
+    import glowcord
 
-    class MyClient(nextcord.Client):
+    class MyClient(glowcord.Client):
         async def on_message(self, message):
             if message.author == self.user:
                 return
@@ -634,7 +634,7 @@ to handle it, which defaults to print a traceback and ignoring the exception.
 
         This is a low level function that is not generally meant to be used.
         If you are working with components, consider using the callbacks associated
-        with the :class:`~nextcord.ui.View` instead as it provides a nicer user experience.
+        with the :class:`~glowcord.ui.View` instead as it provides a nicer user experience.
 
     .. versionadded:: 2.0
 
@@ -1112,31 +1112,31 @@ to handle it, which defaults to print a traceback and ignoring the exception.
 Utility Functions
 -----------------
 
-.. autofunction:: nextcord.utils.find
+.. autofunction:: glowcord.utils.find
 
-.. autofunction:: nextcord.utils.get
+.. autofunction:: glowcord.utils.get
 
-.. autofunction:: nextcord.utils.snowflake_time
+.. autofunction:: glowcord.utils.snowflake_time
 
-.. autofunction:: nextcord.utils.oauth_url
+.. autofunction:: glowcord.utils.oauth_url
 
-.. autofunction:: nextcord.utils.remove_markdown
+.. autofunction:: glowcord.utils.remove_markdown
 
-.. autofunction:: nextcord.utils.escape_markdown
+.. autofunction:: glowcord.utils.escape_markdown
 
-.. autofunction:: nextcord.utils.escape_mentions
+.. autofunction:: glowcord.utils.escape_mentions
 
-.. autofunction:: nextcord.utils.resolve_invite
+.. autofunction:: glowcord.utils.resolve_invite
 
-.. autofunction:: nextcord.utils.resolve_template
+.. autofunction:: glowcord.utils.resolve_template
 
-.. autofunction:: nextcord.utils.sleep_until
+.. autofunction:: glowcord.utils.sleep_until
 
-.. autofunction:: nextcord.utils.utcnow
+.. autofunction:: glowcord.utils.utcnow
 
-.. autofunction:: nextcord.utils.format_dt
+.. autofunction:: glowcord.utils.format_dt
 
-.. autofunction:: nextcord.utils.as_chunks
+.. autofunction:: glowcord.utils.as_chunks
 
 .. _discord-api-enums:
 
@@ -3262,7 +3262,7 @@ AuditLogDiff
 Webhook Support
 ------------------
 
-nextcord offers support for creating, editing, and executing webhooks through the :class:`Webhook` class.
+glowcord offers support for creating, editing, and executing webhooks through the :class:`Webhook` class.
 
 Webhook
 ~~~~~~~~~
@@ -3313,56 +3313,56 @@ This library has a module related to abstract base classes, in which all the ABC
 Snowflake
 ~~~~~~~~~~
 
-.. attributetable:: nextcord.abc.Snowflake
+.. attributetable:: glowcord.abc.Snowflake
 
-.. autoclass:: nextcord.abc.Snowflake()
+.. autoclass:: glowcord.abc.Snowflake()
     :members:
 
 User
 ~~~~~
 
-.. attributetable:: nextcord.abc.User
+.. attributetable:: glowcord.abc.User
 
-.. autoclass:: nextcord.abc.User()
+.. autoclass:: glowcord.abc.User()
     :members:
 
 PrivateChannel
 ~~~~~~~~~~~~~~~
 
-.. attributetable:: nextcord.abc.PrivateChannel
+.. attributetable:: glowcord.abc.PrivateChannel
 
-.. autoclass:: nextcord.abc.PrivateChannel()
+.. autoclass:: glowcord.abc.PrivateChannel()
     :members:
 
 GuildChannel
 ~~~~~~~~~~~~~
 
-.. attributetable:: nextcord.abc.GuildChannel
+.. attributetable:: glowcord.abc.GuildChannel
 
-.. autoclass:: nextcord.abc.GuildChannel()
+.. autoclass:: glowcord.abc.GuildChannel()
     :members:
 
 Messageable
 ~~~~~~~~~~~~
 
-.. attributetable:: nextcord.abc.Messageable
+.. attributetable:: glowcord.abc.Messageable
 
-.. autoclass:: nextcord.abc.Messageable()
+.. autoclass:: glowcord.abc.Messageable()
     :members:
     :exclude-members: history, typing
 
-    .. automethod:: nextcord.abc.Messageable.history
+    .. automethod:: glowcord.abc.Messageable.history
         :async-for:
 
-    .. automethod:: nextcord.abc.Messageable.typing
+    .. automethod:: glowcord.abc.Messageable.typing
         :async-with:
 
 Connectable
 ~~~~~~~~~~~~
 
-.. attributetable:: nextcord.abc.Connectable
+.. attributetable:: glowcord.abc.Connectable
 
-.. autoclass:: nextcord.abc.Connectable()
+.. autoclass:: glowcord.abc.Connectable()
 
 .. _discord_api_models:
 
@@ -4142,40 +4142,40 @@ The library has helpers to help create component-based UIs.
 View
 ~~~~~~~
 
-.. attributetable:: nextcord.ui.View
+.. attributetable:: glowcord.ui.View
 
-.. autoclass:: nextcord.ui.View
+.. autoclass:: glowcord.ui.View
     :members:
 
 Item
 ~~~~~~~
 
-.. attributetable:: nextcord.ui.Item
+.. attributetable:: glowcord.ui.Item
 
-.. autoclass:: nextcord.ui.Item
+.. autoclass:: glowcord.ui.Item
     :members:
 
 Button
 ~~~~~~~
 
-.. attributetable:: nextcord.ui.Button
+.. attributetable:: glowcord.ui.Button
 
-.. autoclass:: nextcord.ui.Button
+.. autoclass:: glowcord.ui.Button
     :members:
     :inherited-members:
 
-.. autofunction:: nextcord.ui.button
+.. autofunction:: glowcord.ui.button
 
 Select
 ~~~~~~~
 
-.. attributetable:: nextcord.ui.Select
+.. attributetable:: glowcord.ui.Select
 
-.. autoclass:: nextcord.ui.Select
+.. autoclass:: glowcord.ui.Select
     :members:
     :inherited-members:
 
-.. autofunction:: nextcord.ui.select
+.. autofunction:: glowcord.ui.select
 
 
 Exceptions
@@ -4212,9 +4212,9 @@ The following exceptions are thrown by the library.
 
 .. autoexception:: InteractionResponded
 
-.. autoexception:: nextcord.opus.OpusError
+.. autoexception:: glowcord.opus.OpusError
 
-.. autoexception:: nextcord.opus.OpusNotLoaded
+.. autoexception:: glowcord.opus.OpusNotLoaded
 
 Exception Hierarchy
 ~~~~~~~~~~~~~~~~~~~~~

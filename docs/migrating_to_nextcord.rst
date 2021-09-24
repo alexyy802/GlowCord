@@ -1,28 +1,28 @@
-.. currentmodule:: nextcord
+.. currentmodule:: glowcord
 
-.. _migrating_nextcord:
+.. _migrating_glowcord:
 
-Migrating to nextcord
+Migrating to glowcord
 ======================
 
 Due to the `original discord.py repository <https://github.com/Rapptz/discord.py>`_ becoming read-only, we decided
 that it would be necessary to fork it and keep on developing further. We also wanted to change the name and voted on
-nextcord in order to properly register it at pypi.
+glowcord in order to properly register it at pypi.
 
 Porting from discord.py
 -------------------------
 
-In order to port a bot using discord.py to nextcord, follow these steps:
+In order to port a bot using discord.py to glowcord, follow these steps:
 
-1. Install nextcord: 
+1. Install glowcord: 
 
     .. code:: sh
 
         # Linux/macOS
-        python3 -m pip install -U nextcord
+        python3 -m pip install -U glowcord
 
         # Windows
-        py -3 -m pip install -U nextcord
+        py -3 -m pip install -U glowcord
 
 2. Uninstall discord.py:
 
@@ -36,10 +36,10 @@ In order to port a bot using discord.py to nextcord, follow these steps:
 
 3. Update the following import statements:
 
-    * ``import discord`` -> ``import nextcord``
-    * ``from discord.ext`` -> ``from nextcord.ext``
+    * ``import discord`` -> ``import glowcord``
+    * ``from discord.ext`` -> ``from glowcord.ext``
 
-4. For all places in your code that used ``discord`` (embeds, colors, etc), change them to use ``nextcord``.
+4. For all places in your code that used ``discord`` (embeds, colors, etc), change them to use ``glowcord``.
 
     Note: Steps 3 and 4 are not entirely necessary and your code should still work, but is highly recommended.
 

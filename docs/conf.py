@@ -1,5 +1,5 @@
 #
-# nextcord documentation build configuration file, created by
+# glowcord documentation build configuration file, created by
 # sphinx-quickstart on Fri Aug 21 05:43:30 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -49,7 +49,7 @@ autodoc_typehints = 'none'
 # napoleon_attr_annotations = False
 
 extlinks = {
-    'issue': ('https://github.com/nextcord/nextcord/issues/%s', 'GH-'),
+    'issue': ('https://github.com/glowcord/glowcord/issues/%s', 'GH-'),
 }
 
 # Links used for cross-referencing stuff in other documentation
@@ -79,7 +79,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'nextcord'
+project = 'glowcord'
 copyright = '2015-present, Rapptz'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -89,7 +89,7 @@ copyright = '2015-present, Rapptz'
 # The short X.Y version.
 
 version = ''
-with open('../nextcord/__init__.py') as f:
+with open('../glowcord/__init__.py') as f:
     version = re.search(r'^__version__\s*=\s*[\'"]([^\'"]*)[\'"]', f.read(), re.MULTILINE).group(1)
 
 # The full version, including alpha/beta/rc tags.
@@ -145,7 +145,7 @@ pygments_style = 'friendly'
 
 # Nitpicky mode options
 nitpick_ignore_files = [
-  "migrating_to_nextcord",
+  "migrating_to_glowcord",
   "migrating_2",
   "migrating_to_async",
   "migrating",
@@ -161,18 +161,18 @@ html_experimental_html5_writer = True
 html_theme = 'basic'
 
 html_context = {
-  'discord_invite': 'https://discord.gg/ZebatWssCB',
+  'discord_invite': 'https://discord.gg/VkXmkMd7au',
   'discord_extensions': [
-    ('nextcord.ext.commands', 'ext/commands'),
-    ('nextcord.ext.tasks', 'ext/tasks'),
+    ('glowcord.ext.commands', 'ext/commands'),
+    ('glowcord.ext.tasks', 'ext/tasks'),
   ],
 }
 
 resource_links = {
-  'discord': 'https://discord.gg/ZebatWssCB',
-  'issues': 'https://github.com/nextcord/nextcord/issues',
-  'discussions': 'https://github.com/nextcord/nextcord/discussions',
-  'examples': f'https://github.com/nextcord/nextcord/tree/{branch}/examples',
+  'discord': 'https://discord.gg/VkXmkMd7au',
+  'issues': 'https://github.com/glowcord/glowcord/issues',
+  'discussions': 'https://github.com/glowcord/glowcord/discussions',
+  'examples': f'https://github.com/glowcord/glowcord/tree/{branch}/examples',
 }
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -198,7 +198,7 @@ resource_links = {
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = './images/nextcord_logo.ico'
+html_favicon = './images/glowcord_logo.ico'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -273,7 +273,7 @@ html_js_files = [
 ]
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'nextcorddoc'
+htmlhelp_basename = 'glowcorddoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -295,7 +295,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'nextcord.tex', 'nextcord Documentation',
+  ('index', 'glowcord.tex', 'glowcord Documentation',
    'Rapptz', 'manual'),
 ]
 
@@ -325,7 +325,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'nextcord', 'nextcord Documentation',
+    ('index', 'glowcord', 'glowcord Documentation',
      ['Rapptz'], 1)
 ]
 
@@ -339,8 +339,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'nextcord', 'nextcord Documentation',
-   'Rapptz', 'nextcord', 'One line description of project.',
+  ('index', 'glowcord', 'glowcord Documentation',
+   'Rapptz', 'glowcord', 'One line description of project.',
    'Miscellaneous'),
 ]
 

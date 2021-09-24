@@ -1,4 +1,4 @@
-.. currentmodule:: nextcord
+.. currentmodule:: glowcord
 
 .. _migrating_2_0:
 
@@ -106,7 +106,7 @@ TL;DR: :func:`utils.utcnow` becomes now(:attr:`datetime.timezone.utc`). If you a
         timestamp = datetime(2021, 3, 14, 15, 9, 2, tzinfo=timezone.utc)
     )
 
-Note that newly-added :func:`nextcord.utils.utcnow()` can be used as an alias of ``datetime.datetime.now(datetime.timezone.utc)``.
+Note that newly-added :func:`glowcord.utils.utcnow()` can be used as an alias of ``datetime.datetime.now(datetime.timezone.utc)``.
 
 Embed.__bool__ change
 ^^^^^^^^^^^^^^^^^^^^^^^^^

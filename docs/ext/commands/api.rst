@@ -1,9 +1,9 @@
-.. currentmodule:: nextcord
+.. currentmodule:: glowcord
 
 API Reference
 ===============
 
-The following section outlines the API of nextcord's command extension module.
+The following section outlines the API of glowcord's command extension module.
 
 .. _ext_commands_api_bot:
 
@@ -13,9 +13,9 @@ Bots
 Bot
 ~~~~
 
-.. attributetable:: nextcord.ext.commands.Bot
+.. attributetable:: glowcord.ext.commands.Bot
 
-.. autoclass:: nextcord.ext.commands.Bot
+.. autoclass:: glowcord.ext.commands.Bot
     :members:
     :inherited-members:
     :exclude-members: after_invoke, before_invoke, check, check_once, command, event, group, listen
@@ -47,17 +47,17 @@ Bot
 AutoShardedBot
 ~~~~~~~~~~~~~~~~
 
-.. attributetable:: nextcord.ext.commands.AutoShardedBot
+.. attributetable:: glowcord.ext.commands.AutoShardedBot
 
-.. autoclass:: nextcord.ext.commands.AutoShardedBot
+.. autoclass:: glowcord.ext.commands.AutoShardedBot
     :members:
 
 Prefix Helpers
 ----------------
 
-.. autofunction:: nextcord.ext.commands.when_mentioned
+.. autofunction:: glowcord.ext.commands.when_mentioned
 
-.. autofunction:: nextcord.ext.commands.when_mentioned_or
+.. autofunction:: glowcord.ext.commands.when_mentioned_or
 
 .. _ext_commands_api_events:
 
@@ -67,7 +67,7 @@ Event Reference
 These events function similar to :ref:`the regular events <discord-api-events>`, except they
 are custom to the command extension module.
 
-.. function:: nextcord.ext.commands.on_command_error(ctx, error)
+.. function:: glowcord.ext.commands.on_command_error(ctx, error)
 
     An error handler that is called when an error is raised
     inside a command either through user input error, check
@@ -80,7 +80,7 @@ are custom to the command extension module.
     :param error: The error that was raised.
     :type error: :class:`.CommandError` derived
 
-.. function:: nextcord.ext.commands.on_command(ctx)
+.. function:: glowcord.ext.commands.on_command(ctx)
 
     An event that is called when a command is found and is about to be invoked.
 
@@ -90,7 +90,7 @@ are custom to the command extension module.
     :param ctx: The invocation context.
     :type ctx: :class:`.Context`
 
-.. function:: nextcord.ext.commands.on_command_completion(ctx)
+.. function:: glowcord.ext.commands.on_command_completion(ctx)
 
     An event that is called when a command has completed its invocation.
 
@@ -108,18 +108,18 @@ Commands
 Decorators
 ~~~~~~~~~~~~
 
-.. autofunction:: nextcord.ext.commands.command
+.. autofunction:: glowcord.ext.commands.command
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.group
+.. autofunction:: glowcord.ext.commands.group
     :decorator:
 
 Command
 ~~~~~~~~~
 
-.. attributetable:: nextcord.ext.commands.Command
+.. attributetable:: glowcord.ext.commands.Command
 
-.. autoclass:: nextcord.ext.commands.Command
+.. autoclass:: glowcord.ext.commands.Command
     :members:
     :special-members: __call__
     :exclude-members: after_invoke, before_invoke, error
@@ -136,9 +136,9 @@ Command
 Group
 ~~~~~~
 
-.. attributetable:: nextcord.ext.commands.Group
+.. attributetable:: glowcord.ext.commands.Group
 
-.. autoclass:: nextcord.ext.commands.Group
+.. autoclass:: glowcord.ext.commands.Group
     :members:
     :inherited-members:
     :exclude-members: after_invoke, before_invoke, command, error, group
@@ -161,9 +161,9 @@ Group
 GroupMixin
 ~~~~~~~~~~~
 
-.. attributetable:: nextcord.ext.commands.GroupMixin
+.. attributetable:: glowcord.ext.commands.GroupMixin
 
-.. autoclass:: nextcord.ext.commands.GroupMixin
+.. autoclass:: glowcord.ext.commands.GroupMixin
     :members:
     :exclude-members: command, group
 
@@ -181,17 +181,17 @@ Cogs
 Cog
 ~~~~
 
-.. attributetable:: nextcord.ext.commands.Cog
+.. attributetable:: glowcord.ext.commands.Cog
 
-.. autoclass:: nextcord.ext.commands.Cog
+.. autoclass:: glowcord.ext.commands.Cog
     :members:
 
 CogMeta
 ~~~~~~~~
 
-.. attributetable:: nextcord.ext.commands.CogMeta
+.. attributetable:: glowcord.ext.commands.CogMeta
 
-.. autoclass:: nextcord.ext.commands.CogMeta
+.. autoclass:: glowcord.ext.commands.CogMeta
     :members:
 
 .. _ext_commands_help_command:
@@ -202,42 +202,42 @@ Help Commands
 HelpCommand
 ~~~~~~~~~~~~
 
-.. attributetable:: nextcord.ext.commands.HelpCommand
+.. attributetable:: glowcord.ext.commands.HelpCommand
 
-.. autoclass:: nextcord.ext.commands.HelpCommand
+.. autoclass:: glowcord.ext.commands.HelpCommand
     :members:
 
 DefaultHelpCommand
 ~~~~~~~~~~~~~~~~~~~
 
-.. attributetable:: nextcord.ext.commands.DefaultHelpCommand
+.. attributetable:: glowcord.ext.commands.DefaultHelpCommand
 
-.. autoclass:: nextcord.ext.commands.DefaultHelpCommand
+.. autoclass:: glowcord.ext.commands.DefaultHelpCommand
     :members:
     :exclude-members: send_bot_help, send_cog_help, send_group_help, send_command_help, prepare_help_command
 
 MinimalHelpCommand
 ~~~~~~~~~~~~~~~~~~~
 
-.. attributetable:: nextcord.ext.commands.MinimalHelpCommand
+.. attributetable:: glowcord.ext.commands.MinimalHelpCommand
 
-.. autoclass:: nextcord.ext.commands.MinimalHelpCommand
+.. autoclass:: glowcord.ext.commands.MinimalHelpCommand
     :members:
     :exclude-members: send_bot_help, send_cog_help, send_group_help, send_command_help, prepare_help_command
 
 Paginator
 ~~~~~~~~~~
 
-.. attributetable:: nextcord.ext.commands.Paginator
+.. attributetable:: glowcord.ext.commands.Paginator
 
-.. autoclass:: nextcord.ext.commands.Paginator
+.. autoclass:: glowcord.ext.commands.Paginator
     :members:
 
 Enums
 ------
 
 .. class:: BucketType
-    :module: nextcord.ext.commands
+    :module: glowcord.ext.commands
 
     Specifies a type of bucket for, e.g. a cooldown.
 
@@ -271,61 +271,61 @@ Enums
 Checks
 -------
 
-.. autofunction:: nextcord.ext.commands.check(predicate)
+.. autofunction:: glowcord.ext.commands.check(predicate)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.check_any(*checks)
+.. autofunction:: glowcord.ext.commands.check_any(*checks)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.has_role(item)
+.. autofunction:: glowcord.ext.commands.has_role(item)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.has_permissions(**perms)
+.. autofunction:: glowcord.ext.commands.has_permissions(**perms)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.has_guild_permissions(**perms)
+.. autofunction:: glowcord.ext.commands.has_guild_permissions(**perms)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.has_any_role(*items)
+.. autofunction:: glowcord.ext.commands.has_any_role(*items)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.bot_has_role(item)
+.. autofunction:: glowcord.ext.commands.bot_has_role(item)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.bot_has_permissions(**perms)
+.. autofunction:: glowcord.ext.commands.bot_has_permissions(**perms)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.bot_has_guild_permissions(**perms)
+.. autofunction:: glowcord.ext.commands.bot_has_guild_permissions(**perms)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.bot_has_any_role(*items)
+.. autofunction:: glowcord.ext.commands.bot_has_any_role(*items)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.cooldown(rate, per, type=nextcord.ext.commands.BucketType.default)
+.. autofunction:: glowcord.ext.commands.cooldown(rate, per, type=glowcord.ext.commands.BucketType.default)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.dynamic_cooldown(cooldown, type=BucketType.default)
+.. autofunction:: glowcord.ext.commands.dynamic_cooldown(cooldown, type=BucketType.default)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.max_concurrency(number, per=nextcord.ext.commands.BucketType.default, *, wait=False)
+.. autofunction:: glowcord.ext.commands.max_concurrency(number, per=glowcord.ext.commands.BucketType.default, *, wait=False)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.before_invoke(coro)
+.. autofunction:: glowcord.ext.commands.before_invoke(coro)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.after_invoke(coro)
+.. autofunction:: glowcord.ext.commands.after_invoke(coro)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.guild_only(,)
+.. autofunction:: glowcord.ext.commands.guild_only(,)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.dm_only(,)
+.. autofunction:: glowcord.ext.commands.dm_only(,)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.is_owner(,)
+.. autofunction:: glowcord.ext.commands.is_owner(,)
     :decorator:
 
-.. autofunction:: nextcord.ext.commands.is_nsfw(,)
+.. autofunction:: glowcord.ext.commands.is_nsfw(,)
     :decorator:
 
 .. _ext_commands_api_context:
@@ -333,25 +333,25 @@ Checks
 Cooldown
 ---------
 
-.. attributetable:: nextcord.ext.commands.Cooldown
+.. attributetable:: glowcord.ext.commands.Cooldown
 
-.. autoclass:: nextcord.ext.commands.Cooldown
+.. autoclass:: glowcord.ext.commands.Cooldown
     :members:
 
 Context
 --------
 
-.. attributetable:: nextcord.ext.commands.Context
+.. attributetable:: glowcord.ext.commands.Context
 
-.. autoclass:: nextcord.ext.commands.Context
+.. autoclass:: glowcord.ext.commands.Context
     :members:
     :inherited-members:
     :exclude-members: history, typing
 
-    .. automethod:: nextcord.ext.commands.Context.history
+    .. automethod:: glowcord.ext.commands.Context.history
         :async-for:
 
-    .. automethod:: nextcord.ext.commands.Context.typing
+    .. automethod:: glowcord.ext.commands.Context.typing
         :async-with:
 
 .. _ext_commands_api_converters:
@@ -359,255 +359,255 @@ Context
 Converters
 ------------
 
-.. autoclass:: nextcord.ext.commands.Converter
+.. autoclass:: glowcord.ext.commands.Converter
     :members:
 
-.. autoclass:: nextcord.ext.commands.ObjectConverter
+.. autoclass:: glowcord.ext.commands.ObjectConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.MemberConverter
+.. autoclass:: glowcord.ext.commands.MemberConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.UserConverter
+.. autoclass:: glowcord.ext.commands.UserConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.MessageConverter
+.. autoclass:: glowcord.ext.commands.MessageConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.PartialMessageConverter
+.. autoclass:: glowcord.ext.commands.PartialMessageConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.GuildChannelConverter
+.. autoclass:: glowcord.ext.commands.GuildChannelConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.TextChannelConverter
+.. autoclass:: glowcord.ext.commands.TextChannelConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.VoiceChannelConverter
+.. autoclass:: glowcord.ext.commands.VoiceChannelConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.StoreChannelConverter
+.. autoclass:: glowcord.ext.commands.StoreChannelConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.StageChannelConverter
+.. autoclass:: glowcord.ext.commands.StageChannelConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.CategoryChannelConverter
+.. autoclass:: glowcord.ext.commands.CategoryChannelConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.InviteConverter
+.. autoclass:: glowcord.ext.commands.InviteConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.GuildConverter
+.. autoclass:: glowcord.ext.commands.GuildConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.RoleConverter
+.. autoclass:: glowcord.ext.commands.RoleConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.GameConverter
+.. autoclass:: glowcord.ext.commands.GameConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.ColourConverter
+.. autoclass:: glowcord.ext.commands.ColourConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.EmojiConverter
+.. autoclass:: glowcord.ext.commands.EmojiConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.PartialEmojiConverter
+.. autoclass:: glowcord.ext.commands.PartialEmojiConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.ThreadConverter
+.. autoclass:: glowcord.ext.commands.ThreadConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.GuildStickerConverter
+.. autoclass:: glowcord.ext.commands.GuildStickerConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.clean_content
+.. autoclass:: glowcord.ext.commands.clean_content
     :members:
 
-.. autoclass:: nextcord.ext.commands.Greedy()
+.. autoclass:: glowcord.ext.commands.Greedy()
 
-.. autofunction:: nextcord.ext.commands.run_converters
+.. autofunction:: glowcord.ext.commands.run_converters
 
 Flag Converter
 ~~~~~~~~~~~~~~~
 
-.. autoclass:: nextcord.ext.commands.FlagConverter
+.. autoclass:: glowcord.ext.commands.FlagConverter
     :members:
 
-.. autoclass:: nextcord.ext.commands.Flag()
+.. autoclass:: glowcord.ext.commands.Flag()
     :members:
 
-.. autofunction:: nextcord.ext.commands.flag
+.. autofunction:: glowcord.ext.commands.flag
 
 .. _ext_commands_api_errors:
 
 Exceptions
 -----------
 
-.. autoexception:: nextcord.ext.commands.CommandError
+.. autoexception:: glowcord.ext.commands.CommandError
     :members:
 
-.. autoexception:: nextcord.ext.commands.ConversionError
+.. autoexception:: glowcord.ext.commands.ConversionError
     :members:
 
-.. autoexception:: nextcord.ext.commands.MissingRequiredArgument
+.. autoexception:: glowcord.ext.commands.MissingRequiredArgument
     :members:
 
-.. autoexception:: nextcord.ext.commands.ArgumentParsingError
+.. autoexception:: glowcord.ext.commands.ArgumentParsingError
     :members:
 
-.. autoexception:: nextcord.ext.commands.UnexpectedQuoteError
+.. autoexception:: glowcord.ext.commands.UnexpectedQuoteError
     :members:
 
-.. autoexception:: nextcord.ext.commands.InvalidEndOfQuotedStringError
+.. autoexception:: glowcord.ext.commands.InvalidEndOfQuotedStringError
     :members:
 
-.. autoexception:: nextcord.ext.commands.ExpectedClosingQuoteError
+.. autoexception:: glowcord.ext.commands.ExpectedClosingQuoteError
     :members:
 
-.. autoexception:: nextcord.ext.commands.BadArgument
+.. autoexception:: glowcord.ext.commands.BadArgument
     :members:
 
-.. autoexception:: nextcord.ext.commands.BadUnionArgument
+.. autoexception:: glowcord.ext.commands.BadUnionArgument
     :members:
 
-.. autoexception:: nextcord.ext.commands.BadLiteralArgument
+.. autoexception:: glowcord.ext.commands.BadLiteralArgument
     :members:
 
-.. autoexception:: nextcord.ext.commands.PrivateMessageOnly
+.. autoexception:: glowcord.ext.commands.PrivateMessageOnly
     :members:
 
-.. autoexception:: nextcord.ext.commands.NoPrivateMessage
+.. autoexception:: glowcord.ext.commands.NoPrivateMessage
     :members:
 
-.. autoexception:: nextcord.ext.commands.CheckFailure
+.. autoexception:: glowcord.ext.commands.CheckFailure
     :members:
 
-.. autoexception:: nextcord.ext.commands.CheckAnyFailure
+.. autoexception:: glowcord.ext.commands.CheckAnyFailure
     :members:
 
-.. autoexception:: nextcord.ext.commands.CommandNotFound
+.. autoexception:: glowcord.ext.commands.CommandNotFound
     :members:
 
-.. autoexception:: nextcord.ext.commands.DisabledCommand
+.. autoexception:: glowcord.ext.commands.DisabledCommand
     :members:
 
-.. autoexception:: nextcord.ext.commands.CommandInvokeError
+.. autoexception:: glowcord.ext.commands.CommandInvokeError
     :members:
 
-.. autoexception:: nextcord.ext.commands.TooManyArguments
+.. autoexception:: glowcord.ext.commands.TooManyArguments
     :members:
 
-.. autoexception:: nextcord.ext.commands.UserInputError
+.. autoexception:: glowcord.ext.commands.UserInputError
     :members:
 
-.. autoexception:: nextcord.ext.commands.CommandOnCooldown
+.. autoexception:: glowcord.ext.commands.CommandOnCooldown
     :members:
 
-.. autoexception:: nextcord.ext.commands.MaxConcurrencyReached
+.. autoexception:: glowcord.ext.commands.MaxConcurrencyReached
     :members:
 
-.. autoexception:: nextcord.ext.commands.NotOwner
+.. autoexception:: glowcord.ext.commands.NotOwner
     :members:
 
-.. autoexception:: nextcord.ext.commands.MessageNotFound
+.. autoexception:: glowcord.ext.commands.MessageNotFound
     :members:
 
-.. autoexception:: nextcord.ext.commands.MemberNotFound
+.. autoexception:: glowcord.ext.commands.MemberNotFound
     :members:
 
-.. autoexception:: nextcord.ext.commands.GuildNotFound
+.. autoexception:: glowcord.ext.commands.GuildNotFound
     :members:
 
-.. autoexception:: nextcord.ext.commands.UserNotFound
+.. autoexception:: glowcord.ext.commands.UserNotFound
     :members:
 
-.. autoexception:: nextcord.ext.commands.ChannelNotFound
+.. autoexception:: glowcord.ext.commands.ChannelNotFound
     :members:
 
-.. autoexception:: nextcord.ext.commands.ChannelNotReadable
+.. autoexception:: glowcord.ext.commands.ChannelNotReadable
     :members:
 
-.. autoexception:: nextcord.ext.commands.ThreadNotFound
+.. autoexception:: glowcord.ext.commands.ThreadNotFound
     :members:
 
-.. autoexception:: nextcord.ext.commands.BadColourArgument
+.. autoexception:: glowcord.ext.commands.BadColourArgument
     :members:
 
-.. autoexception:: nextcord.ext.commands.RoleNotFound
+.. autoexception:: glowcord.ext.commands.RoleNotFound
     :members:
 
-.. autoexception:: nextcord.ext.commands.BadInviteArgument
+.. autoexception:: glowcord.ext.commands.BadInviteArgument
     :members:
 
-.. autoexception:: nextcord.ext.commands.EmojiNotFound
+.. autoexception:: glowcord.ext.commands.EmojiNotFound
     :members:
 
-.. autoexception:: nextcord.ext.commands.PartialEmojiConversionFailure
+.. autoexception:: glowcord.ext.commands.PartialEmojiConversionFailure
     :members:
 
-.. autoexception:: nextcord.ext.commands.GuildStickerNotFound
+.. autoexception:: glowcord.ext.commands.GuildStickerNotFound
     :members:
 
-.. autoexception:: nextcord.ext.commands.BadBoolArgument
+.. autoexception:: glowcord.ext.commands.BadBoolArgument
     :members:
 
-.. autoexception:: nextcord.ext.commands.MissingPermissions
+.. autoexception:: glowcord.ext.commands.MissingPermissions
     :members:
 
-.. autoexception:: nextcord.ext.commands.BotMissingPermissions
+.. autoexception:: glowcord.ext.commands.BotMissingPermissions
     :members:
 
-.. autoexception:: nextcord.ext.commands.MissingRole
+.. autoexception:: glowcord.ext.commands.MissingRole
     :members:
 
-.. autoexception:: nextcord.ext.commands.BotMissingRole
+.. autoexception:: glowcord.ext.commands.BotMissingRole
     :members:
 
-.. autoexception:: nextcord.ext.commands.MissingAnyRole
+.. autoexception:: glowcord.ext.commands.MissingAnyRole
     :members:
 
-.. autoexception:: nextcord.ext.commands.BotMissingAnyRole
+.. autoexception:: glowcord.ext.commands.BotMissingAnyRole
     :members:
 
-.. autoexception:: nextcord.ext.commands.NSFWChannelRequired
+.. autoexception:: glowcord.ext.commands.NSFWChannelRequired
     :members:
 
-.. autoexception:: nextcord.ext.commands.FlagError
+.. autoexception:: glowcord.ext.commands.FlagError
     :members:
 
-.. autoexception:: nextcord.ext.commands.BadFlagArgument
+.. autoexception:: glowcord.ext.commands.BadFlagArgument
     :members:
 
-.. autoexception:: nextcord.ext.commands.MissingFlagArgument
+.. autoexception:: glowcord.ext.commands.MissingFlagArgument
     :members:
 
-.. autoexception:: nextcord.ext.commands.TooManyFlags
+.. autoexception:: glowcord.ext.commands.TooManyFlags
     :members:
 
-.. autoexception:: nextcord.ext.commands.MissingRequiredFlag
+.. autoexception:: glowcord.ext.commands.MissingRequiredFlag
     :members:
 
-.. autoexception:: nextcord.ext.commands.ExtensionError
+.. autoexception:: glowcord.ext.commands.ExtensionError
     :members:
 
-.. autoexception:: nextcord.ext.commands.ExtensionAlreadyLoaded
+.. autoexception:: glowcord.ext.commands.ExtensionAlreadyLoaded
     :members:
 
-.. autoexception:: nextcord.ext.commands.ExtensionNotLoaded
+.. autoexception:: glowcord.ext.commands.ExtensionNotLoaded
     :members:
 
-.. autoexception:: nextcord.ext.commands.NoEntryPointError
+.. autoexception:: glowcord.ext.commands.NoEntryPointError
     :members:
 
-.. autoexception:: nextcord.ext.commands.ExtensionFailed
+.. autoexception:: glowcord.ext.commands.ExtensionFailed
     :members:
 
-.. autoexception:: nextcord.ext.commands.ExtensionNotFound
+.. autoexception:: glowcord.ext.commands.ExtensionNotFound
     :members:
 
-.. autoexception:: nextcord.ext.commands.CommandRegistrationError
+.. autoexception:: glowcord.ext.commands.CommandRegistrationError
     :members:
 
 
