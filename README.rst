@@ -11,7 +11,7 @@
    :target: https://pypi.python.org/pypi/glowcord
    :alt: PyPI version info
 .. image:: https://img.shields.io/pypi/pyversions/nextcord.svg
-   :target: https://pypi.python.org/pypi/nextcord
+   :target: https://pypi.python.org/pypi/glowcord
    :alt: PyPI supported Python versions
 .. image:: https://img.shields.io/readthedocs/glowcord/1.0?label=GlowCordDocs
    :target: https://glowcord.readthedocs.io/en/latest/
