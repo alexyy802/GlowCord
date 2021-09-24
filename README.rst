@@ -1,4 +1,4 @@
-.. image:: assets/nextcord-banner.svg
+.. image:: assets/glowcord-banner.svg
    :alt: Nextcord
 
 .. image:: https://discord.com/api/guilds/794739329956053063/embed.png
