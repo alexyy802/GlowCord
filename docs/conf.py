@@ -161,7 +161,7 @@ html_experimental_html5_writer = True
 html_theme = 'basic'
 
 html_context = {
-  'discord_invite': 'https://discord.gg/VkXmkMd7au',
+  'discord_invite': 'https://discord.gg/ZebatWssCB',
   'discord_extensions': [
     ('glowcord.ext.commands', 'ext/commands'),
     ('glowcord.ext.tasks', 'ext/tasks'),
@@ -169,7 +169,7 @@ html_context = {
 }
 
 resource_links = {
-  'discord': 'https://discord.gg/VkXmkMd7au',
+  'discord': 'https://discord.gg/ZebatWssCB',
   'issues': 'https://github.com/glowcord/glowcord/issues',
   'discussions': 'https://github.com/glowcord/glowcord/discussions',
   'examples': f'https://github.com/glowcord/glowcord/tree/{branch}/examples',
