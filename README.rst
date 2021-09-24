@@ -45,30 +45,30 @@ To install the library without full voice support, you can just run the followin
 .. code:: sh
 
     # Linux/macOS
-    python3 -m pip install -U glowcord
+    python3 -m pip install -U GlowCord
 
     # Windows
-    py -3 -m pip install -U glowcord
+    py -3 -m pip install -U GlowCord
 
 Otherwise to get voice support you should run the following command:
 
 .. code:: sh
 
     # Linux/macOS
-    python3 -m pip install -U "glowcord[voice]"
+    python3 -m pip install -U "GlowCord[voice]"
 
     # Windows
-    py -3 -m pip install -U glowcord[voice]
+    py -3 -m pip install -U GlowCord[voice]
 
 To install additional packages for speedup, run the following command:
 
 .. code:: sh
 
     # Linux/macOS
-    python3 -m pip install -U "glowcord[speed]"
+    python3 -m pip install -U "GlowCord[speed]"
 
     # Windows
-    py -3 -m pip install -U glowcord[speed]
+    py -3 -m pip install -U GlowCord[speed]
 
 
 To install the development version, do the following:
@@ -98,7 +98,7 @@ Quick Example
 
 .. code:: py
 
-    from nextcord.ext import commands
+    from glowcord.ext import commands
 
 
     bot = commands.Bot(command_prefix='$')
@@ -112,11 +112,11 @@ Quick Example
 
 You can find more examples in the examples directory.
 
-**NOTE:** It is not advised to leave your token directly in your code, as it allows anyone with it to access your bot. If you intend to make your code public you should `store it securely <https://github.com/nextcord/nextcord/blob/master/examples/secure_token_storage.py/>`_.
+**NOTE:** It is not advised to leave your token directly in your code, as it allows anyone with it to access your bot. If you intend to make your code public you should `store it securely <https://github.com/GlowCord/GlowCord/blob/master/examples/secure_token_storage.py/>`_.
 
 Links
 ------
 
-- `Documentation <https://nextcord.readthedocs.io/en/latest/>`_
-- `Official Discord Server <https://discord.gg/ZebatWssCB>`_
+- `Documentation <https://glowcord.readthedocs.io/en/latest/>`_
+- `Official Discord Server <https://discord.gg/VkXmkMd7au>`_
 - `Discord API <https://discord.gg/discord-api>`_
