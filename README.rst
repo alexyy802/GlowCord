@@ -26,7 +26,7 @@ Fork notice
 --------------------------
 
 This is a fork of discord.py, which unfortunately has been `officially discontinued <https://gist.github.com/Rapptz/4a2f62751b9600a31a0d3c78100287f1/>`_ on 28th August 2021.
-If You Want This To Be A Replacement Well Lucky For You We're Gonna Be Updating It Alot And If You Want You Can Add A Feature Via Pull Request 
+If You Want This To Be A Replacement Well Lucky For You We're Gonna Be Updating It Alot And If You Want You Can Add A Feature Via Pull Request Thank You.
 
 Key Features
 -------------
